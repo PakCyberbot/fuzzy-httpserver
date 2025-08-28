@@ -5,7 +5,7 @@ with open('README.md', 'r',encoding="utf-8") as fh:
 
 setup(
     name='fuzzy-httpserver',
-    version='1.4.1',
+    version='1.5.0',
     description='Fuzzy matching HTTP file server with autocomplete and fallback',
     author='PakCyberbot',
     author_email='pakcyberbot@pakcyberbot.com',
