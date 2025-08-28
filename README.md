@@ -16,6 +16,20 @@ A lightweight, zero-dependency Python HTTP file server with fuzzy filename match
 - 🖵 Shows IP addresses of key network interfaces at startup
 - Shows the Size and MD5 Hash of Received File - Integrity Check
 
+### 🚀 Major Update 1.5.0
+
+Now **Fuzzy-HTTPServer** can install a collection of essential binaries you’ll need during CTFs or pentest engagements, including:
+
+* Custom exploit code in **C**
+* All the *Potato* privilege escalation binaries (`.exe` and PowerShell)
+* Privilege escalation enumeration scripts
+* Essential PowerShell tooling (e.g., **SharpHound**)
+* Pivoting agents, static builds of **netcat**, **nmap**, and more
+
+In short: **almost every deliverable binary you might need — all in one place.**
+
+🔜 More binaries will be added soon, along with a feature to **update specific binaries to their latest versions automatically.**
+
 ---
 
 ## 📦 Installation
@@ -41,7 +55,21 @@ Serve a specific directory on a custom port:
 ```bash
 fuzzy-httpserver -d /opt/tools -p 9001
 ```
+### 📥 Install Pre-Bundled Binaries
 
+You can extract and install a curated collection of binaries needed for CTFs and pentests
+(e.g., Potato exploits, privilege escalation scripts, SharpHound, pivoting agents, static netcat/nmap, etc.).
+
+Simply specify an output directory with `-i`:
+
+```bash
+fuzzy-httpserver -i /opt/redteam-tools
+```
+⚠️ Note: You must have 7z installed.
+If missing, run:
+```
+sudo apt install p7zip-full
+```
 ### Example
 
 ```bash
@@ -67,6 +95,7 @@ Basically the list of files on that server directory
 | ------------------- | ----------------------------------------- |
 | `-p`, `--port`      | Port to listen on (default: 8000)         |
 | `-d`, `--directory` | Directory to serve (default: current dir) |
+| `-i`, `--install`   | Install essential binaries (extracted from `transfers.7z`) into given path  |
 
 ## 📨 POST Support
 
@@ -105,3 +134,4 @@ Built with 💻 and ☕ by [PakCyberbot](https://pakcyberbot.com).
 ## ✨ Contributions Welcome
 
 Want to improve it? Found a bug? PRs and issues are welcome!
+
